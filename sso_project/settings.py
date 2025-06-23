@@ -48,7 +48,7 @@ EXTERNAL_APPS = [
 
     'allauth.socialaccount.providers.google',
     # 'allauth.socialaccount.providers.facebook',
-    # 'allauth.socialaccount.providers.github'
+    'allauth.socialaccount.providers.github',  # <-- Add comma here
     'crispy_forms',
     'crispy_bootstrap5',
 ]
@@ -141,6 +141,10 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 
+STATICFILES_DIRS = [
+    BASE_DIR / "static",
+]
+
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
@@ -169,9 +173,16 @@ SOCIALACCOUNT_PROVIDERS = {
         },
         'OAUTH_PKCE_ENABLED': True,
     },
-    
 }
 
 LOGIN_REDIRECT_URL = 'home'
 
 LOGOUT_REDIRECT_URL = '/accounts/login/'
+
+
+
+
+# 076f4fb1fe6466eecdfcdd3761dd16944cec7d44
+
+
+# Ov23lih9YmhKW9mEoh1t
